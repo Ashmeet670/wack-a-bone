@@ -25,8 +25,6 @@
     width: 7rem;
 }
 
-
-
 @media only screen and (max-width: 992px) {
     .bone-box {
         height: 8rem;
