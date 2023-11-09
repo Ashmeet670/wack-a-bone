@@ -1,0 +1,113 @@
+@font-face {
+    font-family: wackAbone;
+    src: url(HelloWhackAMole.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: wackAbone;
+    font-size: 1.2rem;
+}
+
+.bg {
+    background-color: rgb(133, 166, 181);
+}
+
+.bone-box {
+    height: 9rem;
+    width: 9rem;
+}
+
+.bone-img{
+    height: 7rem;
+    width: 7rem;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+    .bone-box {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .bone-img{
+        height: 6rem;
+        width: 6rem;
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+
+
+    .bone-box {
+        height: 7rem;
+        width: 7rem;
+    }
+    .bone-img{
+        height: 5rem;
+        width: 5rem;
+    }
+
+}
+
+@media only screen and (max-width:576px) {
+
+    .bone-box {
+        height: 6rem;
+        width: 6rem;
+    }
+    .bone-img{
+        height: 5rem;
+        width: 5rem;
+    }
+}
+
+@media only screen and (max-width:460px) {
+    * {
+        font-size: 1rem;
+    }
+
+    .bone-box {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .bone-img{
+        height: 4rem;
+        width: 4rem;
+    }
+}
+
+@media only screen and (max-width:350px) {
+    * {
+        font-size: 1rem;
+    }
+
+    .bone-box {
+        height: 4rem;
+        width: 4rem;
+    }
+    .bone-img{
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
+@media only screen and (max-width:250px) {
+    * {
+        font-size: 1rem;
+    }
+
+    .bone-box {
+        height: 2rem;
+        width: 2rem;
+    }
+    .bone-img{
+        height: 1rem;
+        width: 1rem;
+    }
+}
