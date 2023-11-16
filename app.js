@@ -65,7 +65,7 @@ function timeReduce(){
     }
 }
 
-let timeInterval = setInterval(timeReduce,10)
+let timeInterval = setInterval(timeReduce,1000)
 
 
 
