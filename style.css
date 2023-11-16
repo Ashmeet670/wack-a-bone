@@ -18,7 +18,13 @@
 .bone-box {
     height: 9rem;
     width: 9rem;
-    
+}
+
+.has-bone{
+    background-image: url(1.png);
+    background-size: 7rem 7rem;
+    background-repeat: no-repeat;
+    background-position: center;
 
 }
 
