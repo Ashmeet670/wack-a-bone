@@ -63,3 +63,12 @@ function timeReduce(){
 
 let timeInterval = setInterval(timeReduce,10)
 
+
+
+function gameOver(){
+
+}
+
+function restart(){
+    location.reload()
+}
