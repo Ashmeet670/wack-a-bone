@@ -2,10 +2,12 @@ console.log("yosss")
 
 boxes = document.querySelectorAll(".bone-box")
 var scoreText = document.getElementById("score")
+var timeText = document.getElementById("time")
 var oldPos = 5
 var score = 0
 var clicked = false
 
+var time = 120
 let boneChanging = 700
 
 function moveBone() {
@@ -21,12 +23,12 @@ function moveBone() {
     oldPos = box
 }
 
-let interval = setInterval(moveBone, boneChanging)
+// let interval = setInterval(moveBone, boneChanging)
 
 
 boxes.forEach(box => {
     box.addEventListener("click", () =>{
-        if(box.classList.contains("has-bone") && clicked == false){
+        if(box.classList.contains("has-bone") && clicked == false && time>0){
             score++
             if(score%15 == 0 && boneChanging>240){
                 boneChanging -= 40  //the bone change spositon 50ms faster every 15 time clicked upon....for graduall hardering diffuclty
@@ -34,10 +36,30 @@ boxes.forEach(box => {
                 clearInterval(interval)
                 interval = setInterval(moveBone, boneChanging)
             } 
-            scoreText.textContent = "Score: "+score
+            scoreText.textContent = score
             clicked = true
             console.log(score)
         }
     })
 });
+
+
+
+function timeReduce(){
+    time--
+    timeText.textContent = time + " seconds"
+
+    if(time == 60){
+        timeText.classList.remove("text-green")
+        timeText.classList.add("text-yellow")
+    }
+
+    if(time == 0){
+        clearInterval(timeInterval)
+        console.log("timeee upppppppp")
+
+    }
+}
+
+let timeInterval = setInterval(timeReduce,10)
 
