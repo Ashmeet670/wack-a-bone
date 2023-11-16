@@ -3,6 +3,7 @@ console.log("yosss")
 boxes = document.querySelectorAll(".bone-box")
 var scoreText = document.getElementById("score")
 var timeText = document.getElementById("time")
+// gameOver = document.getElementById("replay")
 var oldPos = 5
 var score = 0
 var clicked = false
@@ -23,7 +24,7 @@ function moveBone() {
     oldPos = box
 }
 
-// let interval = setInterval(moveBone, boneChanging)
+let interval = setInterval(moveBone, boneChanging)
 
 
 boxes.forEach(box => {
@@ -56,7 +57,10 @@ function timeReduce(){
 
     if(time == 0){
         clearInterval(timeInterval)
+        clearInterval(interval)
+
         console.log("timeee upppppppp")
+        gameOver.classList.remove("d-none")
 
     }
 }
@@ -65,10 +69,6 @@ let timeInterval = setInterval(timeReduce,10)
 
 
 
-function gameOver(){
-    
-}
-
-function restart(){
-    location.reload()
-}
+// function restart(){
+//     location.reload()
+// }

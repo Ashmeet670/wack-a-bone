@@ -20,7 +20,7 @@
     width: 9rem;
 }
 
-.has-bone{
+.has-bone {
     background-image: url(1.png);
     background-size: 7rem 7rem;
     background-repeat: no-repeat;
@@ -28,19 +28,25 @@
 
 }
 
-.text-green{
+.text-green {
     color: rgb(36, 255, 3);
 }
 
-.text-yellow{
+.text-yellow {
     color: rgb(255, 255, 38);
 }
 
-.replay{
-    
+/* .replay{
+    background-color: rgb(95, 210, 245);
+    transition: 0.2s;
+
 }
 
-.bone-img{
+.replay:hover {
+    transform: scale(1.07)
+} */
+
+.bone-img {
     height: 7rem;
     width: 7rem;
 }
@@ -51,52 +57,56 @@
         width: 8rem;
     }
 
-    .bone-img{
+    .bone-img {
         height: 6rem;
         width: 6rem;
     }
 
+    .has-bone {
+        background-size: 6rem 6rem;
+
+    }
+
 }
 
-@media only screen and (max-width:768px) {
 
+@media only screen and (max-width:576px) {
 
     .bone-box {
         height: 7rem;
         width: 7rem;
     }
-    .bone-img{
+
+    .bone-img {
         height: 5rem;
         width: 5rem;
     }
 
-}
+    .has-bone {
+        background-size: 5rem 5rem;
 
-@media only screen and (max-width:576px) {
-
-    .bone-box {
-        height: 6rem;
-        width: 6rem;
-    }
-    .bone-img{
-        height: 5rem;
-        width: 5rem;
     }
 }
 
 @media only screen and (max-width:460px) {
+    
     * {
         font-size: 1rem;
     }
 
     .bone-box {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .bone-img {
         height: 5rem;
         width: 5rem;
     }
 
-    .bone-img{
-        height: 4rem;
-        width: 4rem;
+    .has-bone {
+        background-size: 4rem 4rem;
+
     }
 }
 
@@ -106,12 +116,18 @@
     }
 
     .bone-box {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .bone-img {
         height: 4rem;
         width: 4rem;
     }
-    .bone-img{
-        height: 3rem;
-        width: 3rem;
+
+    .has-bone {
+        background-size: 3rem 3rem;
+
     }
 }
 
@@ -121,11 +137,15 @@
     }
 
     .bone-box {
-        height: 2rem;
-        width: 2rem;
+        height: 4rem;
+        width: 4rem;
     }
-    .bone-img{
-        height: 1rem;
-        width: 1rem;
+
+    .bone-img {
+        height: 4rem;
+        width: 4rem;
+    }
+    .has-bone {
+        background-size: 2rem 2rem;
     }
 }
