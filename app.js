@@ -8,7 +8,7 @@ var oldPos = 5
 var score = 0
 var clicked = false
 
-var time = 120
+var time = 125
 let boneChanging = 700
 
 function moveBone() {
@@ -31,8 +31,8 @@ boxes.forEach(box => {
     box.addEventListener("click", () =>{
         if(box.classList.contains("has-bone") && clicked == false && time>0){
             score++
-            if(score%15 == 0 && boneChanging>240){
-                boneChanging -= 40  //the bone change spositon 50ms faster every 15 time clicked upon....for graduall hardering diffuclty
+            if(score%10 == 0 && boneChanging>400){
+                boneChanging -= 40  
                 console.log(boneChanging)
                 clearInterval(interval)
                 interval = setInterval(moveBone, boneChanging)
