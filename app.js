@@ -79,7 +79,7 @@ function start() {
     if(time > 0 && game == "pause"){
         
         interval = setInterval(moveBone, boneChanging)
-        timeInterval = setInterval(timeReduce, 250)
+        timeInterval = setInterval(timeReduce, 1000)
         score = 0
         scoreText.textContent = score
         game = "play"
