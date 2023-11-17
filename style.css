@@ -43,6 +43,13 @@
     color: black !important;
 }
 
+.replay-playing{
+    background-color: #77c2d9;
+    transition: 0.2s;
+    border: none;
+    color: black !important;
+}
+
 .replay:hover {
     transform: scale(1.07)
 }

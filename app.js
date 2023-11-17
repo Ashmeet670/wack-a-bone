@@ -60,8 +60,10 @@ function timeReduce() {
         game = "over"
         clearInterval(timeInterval)
         clearInterval(interval)
-
+        
         console.log("timeee upppppppp")
+        button.classList.remove("replay-playing")
+        button.classList.add("replay")
         button.textContent = "Replay"
         
     }
@@ -82,6 +84,9 @@ function start() {
         timeInterval = setInterval(timeReduce, 1000)
         score = 0
         scoreText.textContent = score
+        button.classList.remove("replay")
+        button.classList.add("replay-playing")
+        button.textContent = "Playing"
         game = "play"
     }
     
