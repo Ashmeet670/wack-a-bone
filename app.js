@@ -3,10 +3,11 @@ console.log("yosss")
 boxes = document.querySelectorAll(".bone-box")
 var scoreText = document.getElementById("score")
 var timeText = document.getElementById("time")
-// gameOver = document.getElementById("replay")
-var oldPos = 5
+var button = document.getElementById("start-replay")
+var oldPos = 5 
 var score = 0
 var clicked = false
+var game = "pause"
 
 var time = 125
 let boneChanging = 800
@@ -15,28 +16,28 @@ function moveBone() {
 
     document.querySelector(".has-bone").classList.remove("has-bone")
 
-    let box  = Math.floor(Math.random() * 9) + 1
-    if (box == oldPos){
-        box  = Math.floor(Math.random() * 9) + 1
+    let box = Math.floor(Math.random() * 9) + 1
+    if (box == oldPos) {
+        box = Math.floor(Math.random() * 9) + 1
     }
-    boxes[box-1].classList.add("has-bone")
+    boxes[box - 1].classList.add("has-bone")
     clicked = false
     oldPos = box
 }
 
-let interval = setInterval(moveBone, boneChanging)
+
 
 
 boxes.forEach(box => {
-    box.addEventListener("click", () =>{
-        if(box.classList.contains("has-bone") && clicked == false && time>0){
+    box.addEventListener("click", () => {
+        if (box.classList.contains("has-bone") && clicked == false && time > 0) {
             score++
-            if(score%15 == 0 && boneChanging>460){
-                boneChanging -= 40  
+            if (score % 15 == 0 && boneChanging > 500) {
+                boneChanging -= 40
                 console.log(boneChanging)
                 clearInterval(interval)
                 interval = setInterval(moveBone, boneChanging)
-            } 
+            }
             scoreText.textContent = score
             clicked = true
             console.log(score)
@@ -46,29 +47,43 @@ boxes.forEach(box => {
 
 
 
-function timeReduce(){
+function timeReduce() {
     time--
     timeText.textContent = time + " seconds"
 
-    if(time == 60){
+    if (time == 60) {
         timeText.classList.remove("text-green")
         timeText.classList.add("text-yellow")
     }
 
-    if(time == 0){
+    if (time == 0) {
+        game = "over"
         clearInterval(timeInterval)
         clearInterval(interval)
 
         console.log("timeee upppppppp")
-        gameOver.classList.remove("d-none")
-
+        button.textContent = "Replay"
+        
     }
 }
 
-let timeInterval = setInterval(timeReduce,1000)
+let timeInterval;
+let interval;
 
+function start() {
+    if(time == 0 && game == "over"){
+        time = 125
+        game = "pause"
+    }
 
+    if(time > 0 && game == "pause"){
+        
+        interval = setInterval(moveBone, boneChanging)
+        timeInterval = setInterval(timeReduce, 250)
+        score = 0
+        scoreText.textContent = score
+        game = "play"
+    }
+    
+}
 
-// function restart(){
-//     location.reload()
-// }
