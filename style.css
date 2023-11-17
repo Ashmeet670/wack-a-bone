@@ -8,7 +8,7 @@
     padding: 0;
 
     font-family: wackAbone;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .bg {
@@ -16,8 +16,8 @@
 }
 
 .bone-box {
-    height: 9rem;
-    width: 9rem;
+    height: 8rem;
+    width: 8rem;
 }
 
 .has-bone {
@@ -36,34 +36,29 @@
     color: rgb(255, 255, 38);
 }
 
-/* .replay{
-    background-color: rgb(95, 210, 245);
+.replay{
+    background-color: #5fd2f5;
     transition: 0.2s;
-
+    border: none;
+    color: black !important;
 }
 
 .replay:hover {
     transform: scale(1.07)
-} */
-
-.bone-img {
-    height: 7rem;
-    width: 7rem;
 }
 
-@media only screen and (max-width: 992px) {
+
+@media only screen and (min-width: 1023px) {
+ 
+    
     .bone-box {
-        height: 8rem;
-        width: 8rem;
+        height: 9rem;
+        width: 9rem;
     }
 
-    .bone-img {
-        height: 6rem;
-        width: 6rem;
-    }
-
+  
     .has-bone {
-        background-size: 6rem 6rem;
+        background-size: 8rem 8rem;
 
     }
 
@@ -77,11 +72,7 @@
         width: 7rem;
     }
 
-    .bone-img {
-        height: 5rem;
-        width: 5rem;
-    }
-
+ 
     .has-bone {
         background-size: 5rem 5rem;
 
@@ -99,10 +90,7 @@
         width: 6rem;
     }
 
-    .bone-img {
-        height: 5rem;
-        width: 5rem;
-    }
+
 
     .has-bone {
         background-size: 4rem 4rem;
@@ -118,11 +106,6 @@
     .bone-box {
         height: 5rem;
         width: 5rem;
-    }
-
-    .bone-img {
-        height: 4rem;
-        width: 4rem;
     }
 
     .has-bone {
@@ -141,10 +124,7 @@
         width: 4rem;
     }
 
-    .bone-img {
-        height: 4rem;
-        width: 4rem;
-    }
+ 
     .has-bone {
         background-size: 2rem 2rem;
     }
