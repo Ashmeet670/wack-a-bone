@@ -26,7 +26,8 @@
     <body class="bg">
 
 
-       
+        <!-- have to remove has-bnone at the start of every time the bone moves....so for the first time since none of the boxes have the bone, the code will break...therefore here put a has bone dummy -->
+       <div  class="has-bone d-none"></div> 
         
 
 
@@ -36,19 +37,20 @@
                 <span class="fs-4 text-white">Score: <span id="score" class="fs-4">00</span></span>
                 <span class="fs-4 text-white">Time left: <span id="time" class="fs-4 text-green">125 seconds</span> </span>
             </div>
-            <!-- <btn id="replay" onclick="aaa" class="p-2 px-4 rounded-pill replay fs-6">Replay</btn> -->
+            <button id="start-replay" onclick="start()" class="p-1 px-3 rounded-pill replay fs-6">Start</button>
+
         </div>
 
         <div class="container mb-5">
             <div class="row justify-content-center">
-                <div id="1" class="border border-3 border-info bg-info bg-opacity-10 bone-box d-flex align-items-center" ></div>
+                <div id="1" class="border border-3 border-info bg-info bg-opacity-10 bone-box d-flex align-items-center col-3" ></div>
                 
                 <div id="2" class="border border-3 border-info bg-info bg-opacity-10 bone-box border-start-0 border-end-0 d-flex align-items-center" ></div>
                 <div id="3" class="border border-3 border-info bg-info bg-opacity-10 bone-box d-flex align-items-center" ></div>
             </div>
             <div class="row justify-content-center">
                 <div id="4" class="border border-3 border-info bg-info bg-opacity-10 border-top-0 border-bottom-0 bone-box d-flex align-items-center" ></div>
-                <div id="5" class="border-info bg-info bg-opacity-10 d-flex align-items-center bone-box has-bone"> </div>
+                <div id="5" class="border-info bg-info bg-opacity-10 d-flex align-items-center bone-box"> </div>
                 
                 <div id="6" class="border border-3 border-info bg-info bg-opacity-10 border-top-0 border-bottom-0 bone-box d-flex align-items-center" ></div>
 
