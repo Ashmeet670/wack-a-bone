@@ -80,6 +80,7 @@ function start() {
         
         interval = setInterval(moveBone, boneChanging)
         timeInterval = setInterval(timeReduce, 1000)
+        console.log("troubleshooting")
         score = 0
         scoreText.textContent = score
         game = "play"
